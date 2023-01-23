@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ClientController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,6 @@ use App\Http\Controllers\ProductController;
 */
 
 Route::match(['get', 'post'], '/', [ProductController::class, 'index']);
+Route::match(['get', 'post'], '/category', [ProductController::class, 'category']);
+
+Route::match(['get', 'post'], '/register', [ClientController::class, 'register']);

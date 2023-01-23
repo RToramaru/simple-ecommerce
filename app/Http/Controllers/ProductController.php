@@ -12,4 +12,10 @@ class ProductController extends Controller
         $data = [];
         return view('home', $data);
     }
+
+    public function category(Request $request)
+    {
+        $data = [];
+        return view('category', $data);
+    }
 }
