@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <nav class="navbar navbar-light navbar-expand-md bg-light pl-5 pr-5 mb-5">
+    <nav class="navbar navbar-light navbar-expand-md bg-light ps-5 pe-5 mb-5">
         <a href="#" class="navbar-brand">RToramaru Shopping</a>
         <div class="collapse navbar-collapse">
             <div class="navbar-nav">
@@ -29,7 +29,7 @@
                 <div class="card">
                     <img src="/img/produto_1.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Camiseta Masculina</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>
@@ -39,7 +39,7 @@
                 <div class="card">
                     <img src="/img/produto_2.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Moletom</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                 <div class="card">
                     <img src="/img/produto_3.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Sobretudo Masculino</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>
@@ -59,7 +59,7 @@
                 <div class="card">
                     <img src="/img/produto_4.png" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Camisa Cruzeiro 2023</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                 <div class="card">
                     <img src="/img/produto_5.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Bermuda Masculina</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 <div class="card">
                     <img src="/img/produto_6.png" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Terno</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
                 <div class="card">
                     <img src="/img/produto_7.jpeg" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Tênis Nike Air Jordan</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                 <div class="card">
                     <img src="/img/produto_8.jpg" class="card-img-top">
                     <div class="card-body">
-                        <h6 class="card-title">Produto 1</h6>
+                        <h6 class="card-title">Mochila Impermeável</h6>
                         <a href="#" class="btn btn-sm btn-secondary">Adicionar item</a>
                     </div>
                 </div>

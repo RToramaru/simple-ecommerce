@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-class User extends RModel
+class OrderItems extends RModel
 {
-
 }

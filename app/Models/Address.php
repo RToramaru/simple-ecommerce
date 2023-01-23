@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class User extends RModel
-{
 
+class Address extends RModel
+{
 }
