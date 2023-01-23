@@ -15,7 +15,13 @@ use App\Http\Controllers\ClientController;
 |
 */
 
-Route::match(['get', 'post'], '/', [ProductController::class, 'index']);
-Route::match(['get', 'post'], '/category', [ProductController::class, 'category']);
+Route::match(['get', 'post'], '/', [ProductController::class, 'index'])->name('home');
+Route::match(['get', 'post'], '/category', [ProductController::class, 'category'])->name('category');
+Route::match(['get', 'post'], '{id}/category', [ProductController::class, 'category'])->name('category_id');
+Route::match(['get', 'post'], '/{id}/cart/add', [ProductController::class, 'add_cart'])->name('add_cart');
+Route::match(['get', 'post'], '/cart', [ProductController::class, 'view_cart'])->name('view_cart');
 
-Route::match(['get', 'post'], '/register', [ClientController::class, 'register']);
+
+
+Route::match(['get', 'post'], '/register', [ClientController::class, 'register'])->name('register');
+
