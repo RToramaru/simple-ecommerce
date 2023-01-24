@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('state');
             $table->string('cep'); 
             $table->timestamps();
-            $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
         });
     }
 

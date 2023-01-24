@@ -12,13 +12,13 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($cart as $product)
+                @foreach($cart as $id => $product)
                     <tr>
                         <td>{{ $product->name }}</td>
                         <td><img src="{{$product->photograph}}" height="50px"/>  </td>
                         <td>{{ $product->description }}</td>
                         <td>{{ $product->price }}</td>
-                        <td> <a href="#" class="btn btn-danger btn-sm"> <i class="bi bi-trash-fill"></i> </a>
+                       <td> <a href=" {{ route('remove_cart', ['id' => $id]) }}" class="btn btn-danger btn-sm"> <i class="bi bi-trash-fill"></i> </a>
                         </td>
                     </tr>
                 @endforeach

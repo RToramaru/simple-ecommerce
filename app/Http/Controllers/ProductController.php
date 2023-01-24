@@ -55,4 +55,14 @@ class ProductController extends Controller
         $data['cart'] = $cart;
         return view('cart', $data);
     }
+
+    public function remove_cart(Request $request, $id)
+    {
+        $cart = session()->get('cart', []);
+        if(isset($cart[$id])){
+            unset($cart[$id]);
+        }       
+        session()->put('cart', $cart);
+        return redirect()->route('view_cart');
+    }
 }
