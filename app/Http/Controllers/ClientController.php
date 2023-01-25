@@ -34,6 +34,6 @@ class ClientController extends Controller
         
         $request->session()->flash($status, $message);
 
-        return redirect()->route('client.register');
+        return redirect()->route('register');
     }
 }

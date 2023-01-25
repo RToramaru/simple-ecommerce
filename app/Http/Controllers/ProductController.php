@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Services\SaleService;
 
 class ProductController extends Controller
 {
@@ -45,7 +46,7 @@ class ProductController extends Controller
             session()->put('cart', $cart);
         }
 
-        return redirect()->route('product.home');
+        return redirect()->route('home');
     }
 
     public function view_cart(Request $request)
@@ -64,5 +65,17 @@ class ProductController extends Controller
         }       
         session()->put('cart', $cart);
         return redirect()->route('view_cart');
+    }
+
+    public function finalize(Request $request)
+    {
+        $cart = session()->get('cart', []);
+        $sale_services = new SaleService();
+        $result = $sale_services->finalize_sale($cart, \Auth::user());
+
+        if($result['status'] == 'success')
+            session()->put('cart', []);
+            
+        return redirect()->route('home')->with( $result['status'], $result['message']);
     }
 }

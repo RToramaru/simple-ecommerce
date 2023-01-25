@@ -11,7 +11,7 @@ class User extends RModel implements Authenticatable
 
     public function getAuthIdentifierName()
     {
-        return $this->getKey();
+        return 'email';
     }
 
     public function getAuthIdentifier()
