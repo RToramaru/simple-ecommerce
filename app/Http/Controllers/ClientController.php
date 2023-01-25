@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Address;
+use App\Services\ClientService;
 
 class ClientController extends Controller
 {
@@ -19,12 +20,19 @@ class ClientController extends Controller
     {
         $data = $request->all();
         $user = new User();
-        $user->fillable($data);
-        $user->save();
+        $user->fill($data);
+        $user->password = bcrypt($user->password);
 
         $address = new Address();
-        $address->fillable($data);
-        $address->save();
+        $address->fill($data);
+
+        $clientService = new ClientService();
+        $result = $clientService->save_user($user, $address);
+
+        $message = $result['message'];
+        $status = $result['status'];
+        
+        $request->session()->flash($status, $message);
 
         return redirect()->route('register');
     }

@@ -1,6 +1,5 @@
 @extends('layout')
 @section('content')
-
 <div class="col-12">
 
     <div class="col-12 mb-3">
@@ -60,7 +59,7 @@
 
         <div class="col-6">
             <div class="form-group">
-                CEP: <input type="text" name="cep" class="form-control">
+                CEP: <input type="text" name="cep" class="form-control" id="cep">
             </div>
         </div>
         <div class="form-group mt-3">
