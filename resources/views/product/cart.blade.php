@@ -34,7 +34,7 @@
             </tfoot>
 
         </table>
-        <form method="post" action="{{ route('finalize_cart') }}">
+        <form method="post" action="{{ route('pay') }}">
             @csrf
             <input type="submit" value="Finalizar compra" class="btn btn-success col-12 me-2 mt-3 btn-lg">
         </form>

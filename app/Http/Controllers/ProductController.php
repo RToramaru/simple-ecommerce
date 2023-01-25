@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
 use App\Services\SaleService;
+use App\Models\Order;
+use App\Models\OrderItems;
 
 class ProductController extends Controller
 {
@@ -75,7 +77,43 @@ class ProductController extends Controller
 
         if($result['status'] == 'success')
             session()->put('cart', []);
-            
+
         return redirect()->route('home')->with( $result['status'], $result['message']);
+    }
+
+    public function history(Request $request)
+    {
+        $data = [];
+        
+        $user_id = \Auth::user()->id;
+
+        $orders = Order::where('user_id', $user_id)->orderBy('order_date', 'desc')->get();
+
+        $data['orders'] = $orders;
+
+        return view('product.history', $data);
+    }
+
+    public function history_id(Request $request)
+    {   
+        $id = $request->input('index');
+        
+        $data = [];
+
+        $order = Order::find($id);
+
+        $order_items = OrderItems::where('order_id', $id)->get();
+
+        $data['order'] = $order;
+
+        $data['order_items'] = $order_items;
+
+        return view('product.fragments.details', $data);
+    }
+
+    public function pay(Request $request){
+        $data = [];
+
+        return view('product.pay', $data);
     }
 }
