@@ -10,6 +10,6 @@ class UserController extends Controller
     public function login(Request $request)
     {
         $data = [];
-        return view('login', $data);
+        return view('user.login', $data);
     }
 }

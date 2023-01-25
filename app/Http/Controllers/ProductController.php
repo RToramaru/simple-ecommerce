@@ -14,7 +14,7 @@ class ProductController extends Controller
         $data = [];
         $products = Product::all();
         $data['products'] = $products;
-        return view('home', $data);
+        return view('product.home', $data);
     }
 
     public function category(Request $request, $id = null)
@@ -32,7 +32,7 @@ class ProductController extends Controller
         $data['categories'] = $categories;
         $data['id'] = $id;
 
-        return view('category', $data);
+        return view('product.category', $data);
     }
 
     public function add_cart(Request $request, $id)
@@ -45,7 +45,7 @@ class ProductController extends Controller
             session()->put('cart', $cart);
         }
 
-        return redirect()->route('home');
+        return redirect()->route('product.home');
     }
 
     public function view_cart(Request $request)
@@ -53,7 +53,7 @@ class ProductController extends Controller
         $data = [];
         $cart = session()->get('cart', []);
         $data['cart'] = $cart;
-        return view('cart', $data);
+        return view('product.cart', $data);
     }
 
     public function remove_cart(Request $request, $id)

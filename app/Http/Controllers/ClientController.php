@@ -13,7 +13,7 @@ class ClientController extends Controller
     public function register(Request $request)
     {
         $data = [];
-        return view('register', $data);
+        return view('client.register', $data);
     }
 
     public function register_client(Request $request)
@@ -34,6 +34,6 @@ class ClientController extends Controller
         
         $request->session()->flash($status, $message);
 
-        return redirect()->route('register');
+        return redirect()->route('client.register');
     }
 }

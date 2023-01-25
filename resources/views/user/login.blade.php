@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.app')
 @section('content')
     <div class="col-12">
         <h2 class="mb-3">Acessar o sistema</h2>

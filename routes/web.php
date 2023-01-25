@@ -25,4 +25,5 @@ Route::match(['get', 'post'], '/{id}/removecart', [ProductController::class, 're
 
 Route::match(['get', 'post'], '/register', [ClientController::class, 'register'])->name('register');
 Route::match(['get', 'post'], '/client/register', [ClientController::class, 'register_client'])->name('register_client');
+
 Route::match(['get', 'post'], '/login', [UserController::class, 'login'])->name('login');

@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.app')
 @section('content')
     <div class="col-2">
         <div class="list-group">
@@ -13,6 +13,6 @@
     </div>
 
     <div class="col-10">
-        @include('_products', ['products' => $products])
+        @include('product.fragments._products', ['products' => $products])
     </div>
 @endsection

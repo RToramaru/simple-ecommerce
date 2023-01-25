@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layout.app')
 @section('content')
     <h3>Carrinho</h3>
     @if(isset($cart) && count($cart) > 0)
