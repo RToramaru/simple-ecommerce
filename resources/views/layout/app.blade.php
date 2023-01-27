@@ -38,7 +38,7 @@
         <div class="row">
             @if(\Auth::user())
                 <div class="col-12">
-                        <p class="text-end">Olá, {{ \Auth::user()->name }}. Seja bem vindo. <a href="{{ route('logout') }}">Sair</a></p>
+                        <p class="text-end">Olá, {{ \Auth::user()->name }}. Seja bem vindo!</p>
                 </div>
             @endif
             @if (session('success'))

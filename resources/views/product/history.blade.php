@@ -12,13 +12,15 @@
                 <th>Data da compra</th>
                 <th>Ações</th>
             </tr>
-            @foreach($orders as $order)
-                <tr>
-                    <td>Pedido #{{ $order->id }} - {{ $order->status }}</td>
-                    <td>{{ $order->order_date }}</td>
-                    <td> <a href="#" class="btn btn-primary btn-sm info" data-bs-toggle="modal" data-bs-target="#modal_detail" data-bs-value="{{ $order->id }}"> <i class="bi bi-eye-fill"></i> </a>
-                </tr>
-            @endforeach
+            @if(isset($orders) && count($orders) > 0)
+                @foreach($orders as $order)
+                    <tr>
+                        <td>Pedido #{{ $order->id }} - {{ $order->status }}</td>
+                        <td>{{ $order->order_date }}</td>
+                        <td> <a href="#" class="btn btn-primary btn-sm info" data-bs-toggle="modal" data-bs-target="#modal_detail" data-bs-value="{{ $order->id }}"> <i class="bi bi-eye-fill"></i> </a>
+                    </tr>
+                @endforeach
+            @endif
         </table>
     </div>
 
@@ -26,7 +28,9 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
+                @if(isset($orders) && count($orders) > 0)
                     <h2 class="modal-title">Pedido #{{ $order->id }}</h2>
+                @endif
                 </div>
 
                 <div class="modal-body"> 

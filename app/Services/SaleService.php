@@ -31,11 +31,11 @@ class SaleService{
             }
 
             \DB::commit();
-            return ['status' => 'success', 'message' => 'Venda finalizada com sucesso!'];
+            return ['status' => 'success', 'message' => 'Venda finalizada com sucesso!', 'order_id' => $order->id];
         }catch(\Exception $e){
             \Log::error("ERROR", ['file' => $e->getFile(), 'message' => $e->getMessage()]);
             \DB::rollBack();
-            return ['status' => 'error', 'message' => 'Erro ao finalizar venda!'];
+            return ['status' => 'error', 'message' => 'Erro ao finalizar venda!', 'order_id' => 0];
         }
     }
 }
