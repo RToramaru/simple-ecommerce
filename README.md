@@ -1,66 +1,101 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Ecommerce Simples
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Sobre
 
-## About Laravel
+Um aplicação simples de um sistema ecommerce com integração com o pagbank
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Projeto
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+O projeto utiliza dos seguintes recursos:
 
-## Learning Laravel
+    
+*  **PHP** : utilizado o PHP 8.0.25
+     
+    * Download [última versão](https://www.php.net/downloads.php)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+*  **Laravel Framework** : utilizado Laravel Framework 9.46.0
+     
+    * Download [última versão](https://laravel.com/docs/9.x/installation)
+    
+    
+*  **MySQL** : utilizado Utilizando Distribuição 10.4.27-MariaDB
+     
+    * Download [última versão](https://dev.mysql.com/downloads/installer/)
+    
+    
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Clone e execução
 
-## Laravel Sponsors
+Para utilizar o sistema é necessário seguir algumas etapas:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+  1. Clonar o repositório na sua máquina local  e instalar as dependências.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+```
+git https://github.com/RToramaru/simple-ecommerce.git
 
-## Contributing
+cd simple-ecommerce
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+composer install
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+  
+   2. Criar uma copia do arquivo .env.
+    
 
-## Security Vulnerabilities
+```
+copy .env.example .env
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```
 
-## License
+   3. Gere uma chave de criptografia de aplicativo.
+    
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```
+php artisan key:generate
+
+```
+
+   4. Crie o banco de dados.
+    
+```
+php artisan migrate
+
+```
+
+   5. Criar conta no PagSeguro através do link [PagSeguro](https://dev.pagseguro.uol.com.br/)
+   
+   
+   6. Configurar o arquivo ``.env`` alterando os campos ``PAG_SEGURO_EMAIL`` e ``PAG_SEGURO_TOKEN``.
+   disponíveis na conta do sandbox link  [sandbox](https://acesso.pagseguro.uol.com.br/sandbox) 
+  
+
+   7. Inicie o servidor.
+    
+```
+php artisan serve 
+
+```  
+
+
+  
+## Utilização
+
+Para utilizar o sistema é necessário acessar o servidor disponibilizado.
+
+
+## Demonstração
+
+
+
+
+
+https://user-images.githubusercontent.com/42619833/215106131-62b3ee1e-a423-46f2-8b4c-6780592aaa4d.mp4
+
+
+
+
+``@author Rafael Almeida``
